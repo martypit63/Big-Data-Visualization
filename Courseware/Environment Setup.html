@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Environment Setup - Big Data and Visualization</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="description" content="Azure Workshops" />
+    <meta name="author" content="Jim Rosengarth">
+    <link rel="icon" href="" type="image/x-icon">
+    
+    <!-- Font -->
+    
+    <!-- CSS -->
+    <link href='../themes/azure/css/vs.css' rel='stylesheet' type='text/css'><link href='../themes/azure/css/theme.css' rel='stylesheet' type='text/css'><link href='../themes/azure/css/theme-white.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="">
+
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Azure Workshops</a>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div id="content-wrapper" class="container-fluid">
+    <div class="row hidden-print">
+        <div class="col-md-10 col-md-offset-1 breadcrumbs">
+            <a href="../index.html">Big Data and Visualization</a> / <a href="../Courseware/Environment Setup.html">Courseware</a> / <a href="../Courseware/Environment Setup.html">Environment Setup</a>        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1 hidden-print">
+            <div data-spy="affix" data-offset-top="100">
+                <!-- Navigation -->
+                <ul class='Nav'><li class='Nav__item '><a href="../Overview.html">Overview</a></li><li class='Nav__item  has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Getting Started</a><ul class='Nav'><li class='Nav__item '><a href="../Getting_Started/Requirements.html">Requirements</a></li><li class='Nav__item '><a href="../Getting_Started/Azure_Registration.html">Azure Registration</a></li><li class='Nav__item '><a href="../Getting_Started/Setup.html">Setup</a></li></ul></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Courseware</a><ul class='Nav'><li class='Nav__item Nav__item--active'><a href="../Courseware/Environment Setup.html">Environment Setup</a></li><li class='Nav__item '><a href="../Courseware/Check_the_Weather.html">Check the Weather</a></li><li class='Nav__item '><a href="../Courseware/Building_a_ML_Model.html">Building a ML Model</a></li><li class='Nav__item '><a href="../Courseware/Batch_Score_and_Summarize_Data.html">Batch Score and Summarize Data</a></li><li class='Nav__item '><a href="../Courseware/Visualizing_in_Power_BI.html">Visualizing in Power BI</a></li><li class='Nav__item '><a href="../Courseware/Cleanup.html">Cleanup</a></li></ul></li></ul>
+                <div class="Links">
+                    
+                    <div class="pdf-link">
+                        <hr />
+                        <a href="../pdf/Big Data and Visualization.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Download PDF</span></a>
+                    </div>
+
+                                            <hr/>
+                        <div class="Twitter">
+                                                            <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=azureworkshops&amp;show_count=false"></iframe>
+                                <br />
+                                <br />
+                                                    </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <article class="Page">
+    <div class="pageHeader">
+        <h1>Environment Setup</h1>
+                    <div class="date"> Wednesday, September 13, 2017 1:30 PM</div>
+            </div>
+    <div class="copy">
+        <h2 id="page_Exercise-1-Environment-setup"><strong>Exercise 1:</strong> Environment setup</h2>
+<p><strong>Duration:</strong> 20 minutes</p>
+<p><strong>Synopsis:</strong> In this exercise, attendees will download the start project files and take a tour of the provided solution.</p>
+<h3 id="page_Task-1-Download-and-unzip-the-sample"><strong>Task 1:</strong> Download and unzip the sample</h3>
+<ol>
+<li>
+<p>Download the sample project from the following link: <a href="http://bit.ly/238cJDY" class="external">http://bit.ly/238cJDY</a>.</p>
+</li>
+<li>
+<p>Extract the ZIP file.</p>
+</li>
+<li>
+<p>Open the solution AdventureWorksTravel.sln using Visual Studio.</p>
+</li>
+<li>
+<p>In Solution Explorer, right-click the Project and select <strong>Publish</strong>.</p>
+</li>
+<li>
+<p>In the first dialog box, under Select a Publish Target, click <strong>Microsoft Azure App Service</strong>.</p>
+</li>
+<li>
+<p>Sign in to your account when prompted.</p>
+</li>
+<li>
+<p>Click <strong>New</strong>.</p>
+</li>
+<li>
+<p>In the Create App Service dialog box, provide a name for the web app. Choose your subscription and choose to use an existing App Service Plan (if you already have one) or create a new one. If you choose to create a new App Service plan, provide a name for that new App Service plan. Similarly, if creating a new App Service plan, choose an existing Resource Group or create a new one and provide a name for the new resource group (e.g., workshop).</p>
+</li>
+</ol>
+  <img src="../images/create_app_service_dialog.jpg" class="block"/>
+<ol start="9">
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Publish</strong>. After a few moments, the initial version of the web app should appear in the browser.</p>
+</li>
+</ol>
+<h3 id="page_Task-2-Register-Web-App-with-Azure-Active-Directory"><strong>Task 2:</strong> Register Web App with Azure Active Directory</h3>
+<ol>
+<li>
+<p>Login in to the existing portal <a href="https://manage.windowsazure.com/" class="external">https://manage.windowsazure.com/</a> using the same credentials you used for Power BI.</p>
+</li>
+<li>
+<p>Click the <strong>active directory</strong> tab.</p>
+</li>
+</ol>
+  <img src="../images/active_directory_tab.jpg" class="block"/>
+<ol start="3">
+<li>
+<p>Click the name of your default directory in the grid.</p>
+</li>
+<li>
+<p>Click the <strong>Applications</strong> tab.</p>
+</li>
+</ol>
+  <img src="../images/applications_tab.jpg" class="block"/>
+<ol start="5">
+<li>In the command bar at the bottom, click <strong>Add</strong>.</li>
+</ol>
+  <img src="../images/command_bar_add.jpg" class="block"/>
+<ol start="6">
+<li>In the dialog box, click <strong>Add an application my organization is developing</strong>.</li>
+</ol>
+  <img src="../images/add_app_org_dev.jpg" class="block"/>
+<ol start="7">
+<li>In the next dialog box, enter a unique name for your application (e.g., “AdventureWorksTravelYourMSAlias”) and leave the Web Application radio button selected.</li>
+</ol>
+  <img src="../images/web_app_radio_button.jpg" class="block"/>
+<ol start="8">
+<li>
+<p>Click the right arrow button to move to the next screen.</p>
+</li>
+<li>
+<p>For both fields, provide the URL to your newly deployed web app (make sure the URLs start with https).</p>
+</li>
+</ol>
+  <img src="../images/provide_url.jpg" class="block"/>
+<ol start="10">
+<li>
+<p>Click the checkmark button.</p>
+</li>
+<li>
+<p>On the dashboard for your application, click the <strong>Configure</strong> tab.</p>
+</li>
+</ol>
+  <img src="../images/configure_tab.jpg" class="block"/>
+<ol start="12">
+<li>Scroll down to the permissions to other applications section and click <strong>Add application</strong>
+</li>
+</ol>
+  <img src="../images/add_application.jpg" class="block"/>
+<ol start="13">
+<li>In the dialog click on Power BI Service so that it appears in the list on the right and then click the checkmark.</li>
+</ol>
+  <img src="../images/power_bi_service_click.jpg" class="block"/>
+<div class="bs-callout bs-callout-primary"><h4>Power BI</h4>If Power BI Service does not show up on the list of applications, visit [powerbi.microsoft.com](https://powerbi.microsoft.com/en-us/documentation/powerbi-admin-free-with-custom-azure-directory/) to learn how to correct this. You will need to log in to Power BI as an organizational user within your directory before the service shows up in AAD.</div>
+
+<ol start="14">
+<li>In the Power BI Service row that appears, click on <strong>Delegated permissions</strong> and check <strong>View all Dashboards</strong>.</li>
+</ol>
+  <img src="../images/view_all_dashboards.jpg" class="block"/>
+<ol start="15">
+<li>
+<p>Scroll up to the Keys section.</p>
+</li>
+<li>
+<p>Click the <strong>Select duration</strong> drop-down and select <strong>1 year</strong>.</p>
+</li>
+</ol>
+  <img src="../images/duration.jpg" class="block"/>
+<ol start="17">
+<li>
+<p>Click <strong>Save</strong> in the command bar at the bottom.</p>
+</li>
+<li>
+<p>Copy the key value that appears after the save completes.</p>
+</li>
+</ol>
+  <img src="../images/copy_key_value.jpg" class="block"/>
+<ol start="19">
+<li>
+<p>Return to the sample app in Visual Studio, right-click the project in Solution Explorer and select <strong>Properties</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Settings</strong> tab. For the value of the ClientSecret setting, paste the key you just copied.</p>
+</li>
+</ol>
+  <img src="../images/client_secret.jpg" class="block"/>
+<ol start="21">
+<li>Return to the Configure page and copy the Client ID value.</li>
+</ol>
+  <img src="../images/copy_client_id_value.jpg" class="block"/>
+<ol start="22">
+<li>In the sample Settings, paste the value of the ClientID in the ClientID setting.</li>
+</ol>
+  <img src="../images/sample_settings_paste_clientid.jpg" class="block"/>
+<ol start="23">
+<li>Set the value of the RedirectURL to the URL of your newly deployed web app (including HTTPS), and append /Redirect to the end.</li>
+</ol>
+  <img src="../images/set_redirect_url_value.jpg" class="block"/>
+<ol start="24">
+<li>Save the project.</li>
+</ol>
+<h3 id="page_Task-3-Update-sample-app-with-Storage-Account-credentials"><strong>Task 3:</strong> Update sample app with Storage Account credentials</h3>
+<ol>
+<li>
+<p>Using the New Portal, navigate to the blade for your Storage Account.</p>
+</li>
+<li>
+<p>Click <strong>Access Keys</strong>.</p>
+</li>
+</ol>
+  <img src="../images/click_access_keys.jpg" class="block"/>
+<ol start="3">
+<li>To the right of key1 in the table, click the ellipses (…) and select View connection string.</li>
+</ol>
+  <img src="../images/view_connection_string.jpg" class="block"/>
+<ol start="4">
+<li>Copy the displayed <strong>Connection String</strong>. Be sure to copy the entire Connection String, not the Access key only.</li>
+</ol>
+  <img src="../images/displayed_connection_string.jpg" class="block"/>
+<ol start="5">
+<li>Return to the settings pane of the sample web app, and paste this connection string into the value field of the ML_StorageAccount setting.</li>
+</ol>
+  <img src="../images/ml_storage_account.jpg" class="block"/>
+<ol start="6">
+<li>Save the project.</li>
+</ol>
+    </div>
+
+            <nav class="hidden-print">
+            <ul class="pager">
+                                    <li class=pager-prev><a href="../Getting_Started/Setup.html">Previous</a></li>
+                                                    <li class=pager-next><a href="../Courseware/Check_the_Weather.html">Next</a></li>            </ul>
+        </nav>
+    </article>
+        </div>
+        <div class="col-md-2 hidden-print">
+            <div class="article-links" data-spy="affix" data-offset-top="100">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="footer" class="container-fluid hidden-print">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+            
+            </div>
+            <div class="col-md-8" style="text-align:right;">
+            This work is licensed under a Creative Commons Attribution 4.0 International License.
+            </div>
+        </div>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JS -->
+    
+    <script src="../themes/azure/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="../themes/azure/js/theme.js"></script>
+
+</body>
+</html>

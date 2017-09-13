@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Batch Score and Summarize Data - Big Data and Visualization</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="description" content="Azure Workshops" />
+    <meta name="author" content="Jim Rosengarth">
+    <link rel="icon" href="" type="image/x-icon">
+    
+    <!-- Font -->
+    
+    <!-- CSS -->
+    <link href='../themes/azure/css/vs.css' rel='stylesheet' type='text/css'><link href='../themes/azure/css/theme.css' rel='stylesheet' type='text/css'><link href='../themes/azure/css/theme-white.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="">
+
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Azure Workshops</a>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div id="content-wrapper" class="container-fluid">
+    <div class="row hidden-print">
+        <div class="col-md-10 col-md-offset-1 breadcrumbs">
+            <a href="../index.html">Big Data and Visualization</a> / <a href="../Courseware/Environment Setup.html">Courseware</a> / <a href="../Courseware/Batch_Score_and_Summarize_Data.html">Batch Score and Summarize Data</a>        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1 hidden-print">
+            <div data-spy="affix" data-offset-top="100">
+                <!-- Navigation -->
+                <ul class='Nav'><li class='Nav__item '><a href="../Overview.html">Overview</a></li><li class='Nav__item  has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Getting Started</a><ul class='Nav'><li class='Nav__item '><a href="../Getting_Started/Requirements.html">Requirements</a></li><li class='Nav__item '><a href="../Getting_Started/Azure_Registration.html">Azure Registration</a></li><li class='Nav__item '><a href="../Getting_Started/Setup.html">Setup</a></li></ul></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Courseware</a><ul class='Nav'><li class='Nav__item '><a href="../Courseware/Environment Setup.html">Environment Setup</a></li><li class='Nav__item '><a href="../Courseware/Check_the_Weather.html">Check the Weather</a></li><li class='Nav__item '><a href="../Courseware/Building_a_ML_Model.html">Building a ML Model</a></li><li class='Nav__item Nav__item--active'><a href="../Courseware/Batch_Score_and_Summarize_Data.html">Batch Score and Summarize Data</a></li><li class='Nav__item '><a href="../Courseware/Visualizing_in_Power_BI.html">Visualizing in Power BI</a></li><li class='Nav__item '><a href="../Courseware/Cleanup.html">Cleanup</a></li></ul></li></ul>
+                <div class="Links">
+                    
+                    <div class="pdf-link">
+                        <hr />
+                        <a href="../pdf/Big Data and Visualization.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Download PDF</span></a>
+                    </div>
+
+                                            <hr/>
+                        <div class="Twitter">
+                                                            <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=azureworkshops&amp;show_count=false"></iframe>
+                                <br />
+                                <br />
+                                                    </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <article class="Page">
+    <div class="pageHeader">
+        <h1>Batch Score and Summarize Data</h1>
+                    <div class="date"> Wednesday, September 13, 2017 1:30 PM</div>
+            </div>
+    <div class="copy">
+        <h2 id="page_Exercise-4-Batch-score-data-with-Azure-ML-and-summarize-with-SQL-Data-Warehouse"><strong>Exercise 4:</strong> Batch score data with Azure ML and summarize with SQL Data Warehouse</h2>
+<p><strong>Duration:</strong> 60 mins</p>
+<p><strong>Synopsis:</strong> In this exercise, attendees will batch score and prepare a summary of flight delay data in SQL Data Warehouse.</p>
+<h3 id="page_Task-1-Batch-score-flight-data"><strong>Task 1:</strong> Batch score flight data</h3>
+<ol>
+<li>
+<p>AdventureWorks has provided a sample CSV file to batch score using your Azure ML model. You can download it from <a href="http://bit.ly/1XGg6M5" class="external">http://bit.ly/1XGg6M5</a>.</p>
+</li>
+<li>
+<p>Open Visual Studio.</p>
+</li>
+<li>
+<p>From the <strong>View</strong> menu, select <strong>Cloud Explorer</strong>.</p>
+</li>
+</ol>
+<img src="../images/select_cloud_explorer.jpg" class="block"/>
+<ol start="4">
+<li>If prompted, sign in to Visual Studio. Enter your login and click <strong>Continue</strong>.</li>
+</ol>
+<img src="../images/visual_studio_login.jpg" class="block"/>
+<ol start="5">
+<li>Select the appropriate option for work or school account or Microsoft account.</li>
+</ol>
+<img src="../images/visual_studio_account_option.jpg" class="block"/>
+<ol start="6">
+<li>Enter your password and click <strong>Sign In</strong>.</li>
+</ol>
+<img src="../images/account_sign_in.jpg" class="block"/>
+<ol start="7">
+<li>
+<p>Allow Cloud Explorer about 30 seconds to load your subscription resources.</p>
+</li>
+<li>
+<p>Expand <strong>Storage Accounts</strong>. It may take a few moments to load.</p>
+</li>
+</ol>
+<img src="../images/expand_storage_accounts.jpg" class="block"/>
+<ol start="9">
+<li>Expand the Storage Account you created for this workshop, then right-click <strong>Blob Containers</strong> and select <strong>Create Blob Container</strong>.</li>
+</ol>
+<img src="../images/create_blob_container.jpg" class="block"/>
+<ol start="10">
+<li>
+<p>Provide a name for the container.</p>
+</li>
+<li>
+<p>Right-click the new container, and select <strong>Open Blob Container Editor</strong>.</p>
+</li>
+</ol>
+<img src="../images/open_blob_container.jpg" class="block"/>
+<ol start="12">
+<li>In the document that appears, click <strong>Upload Blob</strong>.</li>
+</ol>
+<img src="../images/upload_blob.jpg" class="block"/>
+<ol start="13">
+<li>In the Upload New File dialog box, browse to the FlightsAndWeather.csv file you downloaded and select it. Enter flights in the Folder field, and click <strong>OK</strong>.</li>
+</ol>
+<img src="../images/upload_new_file.jpg" class="block"/>
+<ol start="14">
+<li>Wait for the upload to complete.</li>
+</ol>
+<img src="../images/wait_for_upload.jpg" class="block"/>
+<ol start="15">
+<li>
+<p>Open a browser and navigate to Azure Machine Learning Web Services and click <strong>Web Services</strong>. You can always get there by going to <a href="https://services.azureml.net/" class="external">https://services.azureml.net/</a>.</p>
+</li>
+<li>
+<p>Click on your web service.</p>
+</li>
+<li>
+<p>Click on the <strong>Consume</strong> tab.</p>
+</li>
+<li>
+<p>On this page, take note of the PRIMARY KEY below the Basic Consumption Info section. You will need this value in a subsequent step.</p>
+</li>
+<li>
+<p>Also within this section, observe the BATCH REQUESTS URL.</p>
+</li>
+</ol>
+<img src="../images/batch_requests_url.jpg" class="block"/>
+<ol start="20">
+<li>The sequence of letters and numbers following subscriptions/ is your workspace ID. Take note of this ID. The sequence of letters and numbers following services/ is your service ID, take note of this ID as well.</li>
+</ol>
+<img src="../images/batch_requests_url2.jpg" class="block"/>
+<ol start="21">
+<li>
+<p>With the sample app open in Visual Studio. In Solution Explorer, right-click the project, select <strong>Properties</strong>, and then click the <strong>Settings</strong> tab.</p>
+</li>
+<li>
+<p>Verify the values for the following settings from your published Machine Learning service (they should be exactly the same as what you used for the request/response task earlier):</p>
+</li>
+</ol>
+<pre><code>ML_APIKey: PRIMARY KEY for your Machine Learning web service
+ML_StorageAccount: The connection string to the Storage Account where you uploaded the flights CSV.
+ML_WorkspaceID: The ID of the Machine Learning Workspace.
+ML_ServiceID: The ID of your Machine Learning web service.
+ML_RegionPrefix: The name of the region in which your ML service is deployed.
+</code></pre>
+<img src="../images/published_machine_learning_service.jpg" class="block"/>
+<ol start="23">
+<li>
+<p>Save the solution.</p>
+</li>
+<li>
+<p>Publish the solution.</p>
+</li>
+<li>
+<p>Navigate to your deployed sample in the browser, but instead of going to the homepage go to BatchScore, for example:</p>
+<ul>
+<li>
+<a href="http://%3Cyourwebapp%3E.azurewebsites.net/BatchScore" class="external">http://&lt;yourwebapp&gt;.azurewebsites.net/BatchScore</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Modify the values of the relative paths for the location of the file to score and the location of scored output to that it is correct for your environment, for example:</p>
+<ul>
+<li>
+<p>Relative location of file to score:
+<strong>&lt;ContainerName&gt;</strong>/flights/FlightsAndWeather.csv</p>
+</li>
+<li>
+<p>Relative location of scored output file: <strong>&lt;ContainerName&gt;</strong>/flights/Scored_FlightsAndWeather.csv</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Submit Job</strong>.</p>
+</li>
+<li>
+<p>When a Job ID appears, click <strong>Start Job</strong> to begin the batch scoring process.</p>
+</li>
+<li>
+<p>Periodically click check job status until you see the job status of Job is finished. This will take 1-2 minutes. You now have a scored CSV ready for summarization using SQL Data Warehouse.</p>
+</li>
+</ol>
+<h3 id="page_Task-2-Summarize-delays-by-airport"><strong>Task 2:</strong> Summarize delays by airport</h3>
+<ol>
+<li>Using Visual Studio, go to Cloud Explorer by selecting <strong>View</strong>, <strong>Cloud Explorer</strong>.</li>
+</ol>
+<img src="../images/view_cloud_explorer.jpg" class="block"/>
+<ol start="2">
+<li>Expand SQL Databases</li>
+</ol>
+<img src="../images/expand_sql_databases.jpg" class="block"/>
+<ol start="3">
+<li>
+<p>Right-click your SQL Data Warehouse and select <strong>Open SQL Server Object Explorer</strong>. If this fails with an error, you can always open SQL Server Object Explorer from the View menu and then add your SQL Server manually.
+<img src="../images/sql_server_object_explorer.jpg" class="block"/></p>
+<ul>
+<li>Use the Connect dialog as displayed below to connect to your SQL Server manually if the automatic connection failed:</li>
+</ul>
+<img src="../images/connect_dialog.jpg" class="block"/>
+<ul>
+<li>If you get an error like the one below, it is probably because your IP Address is not added as a client that can access the SQL Database</li>
+</ul>
+<img src="../images/error_firewall.jpg" class="block"/>
+<ul>
+<li>You will need to head to your SQL Database blade in Azure Portal and choose Firewall and click on the “Add Client IP”</li>
+</ul>
+<img src="../images/add_firewall_exception.jpg" class="block"/>
+</li>
+<li>
+<p>In SQL Server Object Explorer, right-click your SQL Data Warehouse database and select <strong>New Query</strong>.</p>
+</li>
+</ol>
+<img src="../images/new_query.jpg" class="block"/>
+<ol start="5">
+<li>In the document that appears, paste the following query, which stores the connection information to your Azure Storage Account (that contains the Scored_FlightAndWeather.csv) and defines a particular container and path as the root for subsequent steps. Substitute in your Storage Account Name and Storage Account Key (replacing the &lt;StorageAccountKey&gt;, &lt;Container&gt;, and &lt;StorageAccountName&gt; in the query with the corresponding values you can get from the Azure Portal).</li>
+</ol>
+<pre><code class="language-SQL">CREATE MASTER KEY;
+
+CREATE DATABASE SCOPED CREDENTIAL ASBSecret 
+WITH IDENTITY = 'flightdelaysclient'
+,    Secret = '&lt;StorageAccountKey&gt;'
+;
+
+CREATE EXTERNAL DATA SOURCE azure_storage 
+WITH
+(
+    TYPE = HADOOP
+,   LOCATION ='wasbs://&lt;Container&gt;@&lt;StorageAccountName&gt;.blob.core.windows.net/flights'
+,   CREDENTIAL = ASBSecret
+);   
+
+CREATE EXTERNAL FILE FORMAT text_file_format 
+WITH 
+(   
+    FORMAT_TYPE = DELIMITEDTEXT 
+,   FORMAT_OPTIONS  (
+                        FIELD_TERMINATOR =','
+                    ,   USE_TYPE_DEFAULT = TRUE
+                    )
+);
+</code></pre>
+<ol start="6">
+<li>
+<p>Run the Query by clicking the <strong>Execute</strong> icon <img src="../images/execute_icon.jpg" class="inline"/>. The first time you run a query this way, you may get an error dialog box which you can safely ignore. All error messages will be output in the output pane just below the query window.</p>
+</li>
+<li>
+<p>Next, append the following query which creates an external table (e.g., a table structure that is superimposed over the files in Blob storage).</p>
+</li>
+</ol>
+<pre><code class="language-SQL">CREATE EXTERNAL TABLE FlightDelays(OriginAirportCode char(3), Month tinyint, Day tinyint, Hour tinyint, DayOfWeek tinyint, Carrier varchar(4), DestAirportCode char(3), DepDelay15 bit, WindSpeed smallint, SeaLevelPressure decimal(4,2),   
+HourlyPrecipitation decimal(8,5), DelayPredicted bit, DelayProbability decimal(5,4), 	OriginLatitude decimal(14,10), OriginLongitude decimal(14,10)) 
+WITH
+(
+LOCATION = '/Scored_FlightsAndWeather.csv',
+DATA_SOURCE = azure_storage,
+FILE_FORMAT = text_file_format,
+REJECT_TYPE = value,
+REJECT_VALUE = 100000
+);
+</code></pre>
+<ol start="8">
+<li>
+<p>Highlight the query you just added and click <strong>Execute</strong>. (By highlighting the query, only the selection is executed.) When this completes, you should have the FlightDelays table you can query using T-SQL.</p>
+</li>
+<li>
+<p>Run the following T-SQL to view a sample of the contents.</p>
+</li>
+</ol>
+<pre><code class="language-SQL">SELECT Top 100 * FROM FlightDelays;
+</code></pre>
+<ol start="10">
+<li>You should see output similar to the following:</li>
+</ol>
+<img src="../images/sql_output.jpg" class="block"/>
+<ol start="11">
+<li>Create a View called FlightDelaysSummary by copying and pasting the following SQL and then executing it:</li>
+</ol>
+<pre><code class="language-SQL">CREATE VIEW FlightDelaysSummary AS
+SELECT  OriginAirportCode, Cast(OriginLatitude as varchar(15)) + ',' + Cast(OriginLongitude as varchar(15))  OriginLatLong, Month, Day, Hour, Sum(Cast(DelayPredicted as int)) NumDelays, Avg(DelayProbability) AvgDelayProbability 
+FROM FlightDelays 
+WHERE Month = 4
+GROUP BY OriginAirportCode, Cast(OriginLatitude as varchar(15)) + ',' + Cast(OriginLongitude as varchar(15)) , Month, Day, Hour
+Having Sum(Cast(DelayPredicted as int) ) &gt; 1
+</code></pre>
+<ol start="12">
+<li>Examine the contents of this view by running the following query.</li>
+</ol>
+<pre><code class="language-SQL">SELECT * FROM FlightDelaysSummary
+</code></pre>
+<ol start="13">
+<li>You are now ready to visualize this data with PowerBI.</li>
+</ol>
+    </div>
+
+            <nav class="hidden-print">
+            <ul class="pager">
+                                    <li class=pager-prev><a href="../Courseware/Building_a_ML_Model.html">Previous</a></li>
+                                                    <li class=pager-next><a href="../Courseware/Visualizing_in_Power_BI.html">Next</a></li>            </ul>
+        </nav>
+    </article>
+        </div>
+        <div class="col-md-2 hidden-print">
+            <div class="article-links" data-spy="affix" data-offset-top="100">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="footer" class="container-fluid hidden-print">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+            
+            </div>
+            <div class="col-md-8" style="text-align:right;">
+            This work is licensed under a Creative Commons Attribution 4.0 International License.
+            </div>
+        </div>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JS -->
+    
+    <script src="../themes/azure/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="../themes/azure/js/theme.js"></script>
+
+</body>
+</html>

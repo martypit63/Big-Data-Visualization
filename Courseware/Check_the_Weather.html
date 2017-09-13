@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Check the Weather - Big Data and Visualization</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="description" content="Azure Workshops" />
+    <meta name="author" content="Jim Rosengarth">
+    <link rel="icon" href="" type="image/x-icon">
+    
+    <!-- Font -->
+    
+    <!-- CSS -->
+    <link href='../themes/azure/css/vs.css' rel='stylesheet' type='text/css'><link href='../themes/azure/css/theme.css' rel='stylesheet' type='text/css'><link href='../themes/azure/css/theme-white.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="">
+
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Azure Workshops</a>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div id="content-wrapper" class="container-fluid">
+    <div class="row hidden-print">
+        <div class="col-md-10 col-md-offset-1 breadcrumbs">
+            <a href="../index.html">Big Data and Visualization</a> / <a href="../Courseware/Environment Setup.html">Courseware</a> / <a href="../Courseware/Check_the_Weather.html">Check the Weather</a>        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1 hidden-print">
+            <div data-spy="affix" data-offset-top="100">
+                <!-- Navigation -->
+                <ul class='Nav'><li class='Nav__item '><a href="../Overview.html">Overview</a></li><li class='Nav__item  has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Getting Started</a><ul class='Nav'><li class='Nav__item '><a href="../Getting_Started/Requirements.html">Requirements</a></li><li class='Nav__item '><a href="../Getting_Started/Azure_Registration.html">Azure Registration</a></li><li class='Nav__item '><a href="../Getting_Started/Setup.html">Setup</a></li></ul></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Courseware</a><ul class='Nav'><li class='Nav__item '><a href="../Courseware/Environment Setup.html">Environment Setup</a></li><li class='Nav__item Nav__item--active'><a href="../Courseware/Check_the_Weather.html">Check the Weather</a></li><li class='Nav__item '><a href="../Courseware/Building_a_ML_Model.html">Building a ML Model</a></li><li class='Nav__item '><a href="../Courseware/Batch_Score_and_Summarize_Data.html">Batch Score and Summarize Data</a></li><li class='Nav__item '><a href="../Courseware/Visualizing_in_Power_BI.html">Visualizing in Power BI</a></li><li class='Nav__item '><a href="../Courseware/Cleanup.html">Cleanup</a></li></ul></li></ul>
+                <div class="Links">
+                    
+                    <div class="pdf-link">
+                        <hr />
+                        <a href="../pdf/Big Data and Visualization.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Download PDF</span></a>
+                    </div>
+
+                                            <hr/>
+                        <div class="Twitter">
+                                                            <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=azureworkshops&amp;show_count=false"></iframe>
+                                <br />
+                                <br />
+                                                    </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <article class="Page">
+    <div class="pageHeader">
+        <h1>Check the Weather</h1>
+                    <div class="date"> Wednesday, September 13, 2017 1:30 PM</div>
+            </div>
+    <div class="copy">
+        <h2 id="page_Exercise-2-Check-the-weather">Exercise 2: Check the weather</h2>
+<p><strong>Duration:</strong> 20 mins</p>
+<p><strong>Synopsis:</strong> In this exercise, attendees will integrate the 10-day weather forecast into the sample solution.</p>
+<h3 id="page_Task-1-Register-for-trial-account-in-WeatherUnderground-com"><strong>Task 1:</strong> Register for trial account in WeatherUnderground.com</h3>
+<ol>
+<li>
+<p>To retrieve the 10-day hourly weather forecast, you will use an API from <a href="https://www.wunderground.com/" class="external">WeatherUnderground.com</a>. There is a free developer version that provides you access to the API you need for this workshop.</p>
+</li>
+<li>
+<p>Navigate to <a href="http://www.wunderground.com/weather/api/" class="external">http://www.wunderground.com/weather/api/</a>.</p>
+</li>
+<li>
+<p>Click <strong>Explore My Options</strong>.</p>
+</li>
+</ol>
+<img src="../images/explore_my_options.jpg" class="block"/>
+<ol start="4">
+<li>On the Get Your API Key page, select <strong>Anvil Plan</strong>.</li>
+</ol>
+<img src="../images/anvil_plan.jpg" class="block"/>
+<ol start="5">
+<li>Scroll down until you see the area titled How much will you use our service? Ensure Developer is selected.</li>
+</ol>
+<img src="../images/weather_service_use.jpg" class="block"/>
+<ol start="6">
+<li>Click <strong>Purchase Key</strong>.</li>
+</ol>
+<img src="../images/purchase_key.jpg" class="block"/>
+<ol start="7">
+<li>Complete the Create an Account form by providing your email, username and a password and agreeing to the terms. Click Basic – Free.</li>
+</ol>
+<img src="../images/create_an_account.jpg" class="block"/>
+<ol start="8">
+<li>
+<p>Back on the Get Your API Key page, re-select Anvil and click Purchase Key.</p>
+</li>
+<li>
+<p>In a few moments you should receive a confirmation email at the email address you provided. Click the link found within the email.</p>
+</li>
+</ol>
+<img src="../images/confirmation_email.jpg" class="block"/>
+<ol start="10">
+<li>On the page that loads, you will see a message like the following:</li>
+</ol>
+<img src="../images/successful_validation.jpg" class="block"/>
+<ol start="11">
+<li>Complete the brief contact form. When answering where will the API be used, select <strong>Website</strong>. For Will the API be used for commercial use, select <strong>No</strong>. Click <strong>Purchase Key</strong>.</li>
+</ol>
+<img src="../images/contact_form.jpg" class="block"/>
+<ol start="12">
+<li>You should be taken to a page that displays your key, similar to the following:</li>
+</ol>
+<img src="../images/key_display.jpg" class="block"/>
+<ol start="13">
+<li>
+<p>Take note of your API Key. It is available from the text box labeled <strong>Key ID</strong>.</p>
+</li>
+<li>
+<p>To verify that your API Key is working, modify the following URL to include your API Key: <a href="http://api.wunderground.com/api/%3CYOURAPIKEY%3E/hourly10day/q/CA/SEATAC.json" class="external">http://api.wunderground.com/api/&lt;YOURAPIKEY&gt;/hourly10day/q/CA/SEATAC.json</a>.</p>
+</li>
+<li>
+<p>Open your modified link in a browser, you should get a JSON result showing the 10-day, hourly weather forecast for the Seattle-Tacoma International Airport.</p>
+</li>
+</ol>
+<img src="../images/json_results.jpg" class="block"/>
+<h3 id="page_Task-2-Update-sample-Web-App-with-API-Key"><strong>Task 2:</strong> Update sample Web App with API Key</h3>
+<ol>
+<li>
+<p>Next, you will update the sample app with your Weather Underground API Key.</p>
+</li>
+<li>
+<p>With the sample app open in Visual Studio, in Solution Explorer, right-click the project and select <strong>Properties</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Settings</strong> tab.</p>
+</li>
+</ol>
+<img src="../images/settings_tab.jpg" class="block"/>
+<ol start="4">
+<li>
+<p>Edit the value for the Weather_APIKey and click <strong>Save</strong>.</p>
+</li>
+<li>
+<p>In Visual Studio Solution Explorer, right-click your project, select <strong>Publish</strong>, and then click <strong>Publish</strong>.</p>
+</li>
+<li>
+<p>On your deployed web app, change the date of the flight to tomorrow's date (or another future date no further than 10 days away).</p>
+</li>
+<li>
+<p>Click <strong>Predict Delay</strong>. You should see the weather icon display. If you hover over the icon, you will get the description of the weather conditions forecasted. At this point, Delay Prediction should display not configured. You will set Delay Prediction up shortly.</p>
+</li>
+</ol>
+<img src="../images/predict_delay.jpg" class="block"/>
+    </div>
+
+            <nav class="hidden-print">
+            <ul class="pager">
+                                    <li class=pager-prev><a href="../Courseware/Environment Setup.html">Previous</a></li>
+                                                    <li class=pager-next><a href="../Courseware/Building_a_ML_Model.html">Next</a></li>            </ul>
+        </nav>
+    </article>
+        </div>
+        <div class="col-md-2 hidden-print">
+            <div class="article-links" data-spy="affix" data-offset-top="100">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="footer" class="container-fluid hidden-print">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+            
+            </div>
+            <div class="col-md-8" style="text-align:right;">
+            This work is licensed under a Creative Commons Attribution 4.0 International License.
+            </div>
+        </div>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JS -->
+    
+    <script src="../themes/azure/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="../themes/azure/js/theme.js"></script>
+
+</body>
+</html>
